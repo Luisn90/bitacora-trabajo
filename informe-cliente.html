@@ -322,16 +322,15 @@ body { font-family:'Plus Jakarta Sans',sans-serif; background:var(--bg); color:v
 
 <script>
 // ── PARSE URL PARAMS ──
-const params   = new URLSearchParams(window.location.search);
-const BLOB_ID  = params.get('blob');
-const FILE_ID  = params.get('file'); // legacy
-const SLUG     = params.get('slug') || 'informe';
+const params = new URLSearchParams(window.location.search);
+const SLUG   = params.get('slug') || 'informe';
 
 let reportData = null;
 
 // ── CHECK PASSWORD ──
 function checkPass() {
   const val = document.getElementById('pass-input').value.trim();
+  if (!val) return;
   if (!reportData) {
     loadReport(val);
   } else {
@@ -340,28 +339,16 @@ function checkPass() {
 }
 
 async function loadReport(pass) {
-  const id = BLOB_ID || FILE_ID;
-  if (!id) {
-    document.getElementById('lock-err').textContent = 'Link inválido — falta el ID del informe.';
-    document.getElementById('lock-err').style.display = 'block';
-    return;
-  }
   document.getElementById('lock-screen').style.display = 'none';
   document.getElementById('loading-screen').classList.add('show');
 
   try {
-    let url;
-    if (BLOB_ID) {
-      // JSONBlob — fully public, no auth needed
-      url = `https://jsonblob.com/api/jsonBlob/${BLOB_ID}`;
-    } else {
-      // Legacy Drive URL
-      url = `https://drive.google.com/uc?export=download&id=${FILE_ID}`;
-    }
+    // Decode data from URL hash — no external service needed
+    const hash = window.location.hash.slice(1);
+    if (!hash) throw new Error('Link inválido — no contiene datos del informe.');
 
-    const resp = await fetch(url, { headers: { 'Accept': 'application/json' } });
-    if (!resp.ok) throw new Error(`No se pudo cargar el informe (HTTP ${resp.status})`);
-    reportData = await resp.json();
+    const jsonStr = decodeURIComponent(escape(atob(hash)));
+    reportData = JSON.parse(jsonStr);
     verifyAndShow(pass);
   } catch(e) {
     document.getElementById('loading-screen').classList.remove('show');
