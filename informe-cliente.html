@@ -343,12 +343,22 @@ async function loadReport(pass) {
   document.getElementById('loading-screen').classList.add('show');
 
   try {
-    // Decode data from URL hash — no external service needed
-    const hash = window.location.hash.slice(1);
-    if (!hash) throw new Error('Link inválido — no contiene datos del informe.');
+    const rawId = params.get('id');
 
-    const jsonStr = decodeURIComponent(escape(atob(hash)));
-    reportData = JSON.parse(jsonStr);
+    if (rawId) {
+      // Load from GitHub raw URL — clean, public, no auth needed
+      const url  = decodeURIComponent(rawId);
+      const resp = await fetch(url + '?t=' + Date.now()); // cache bust
+      if (!resp.ok) throw new Error(`No se pudo cargar el informe (HTTP ${resp.status})`);
+      reportData = await resp.json();
+    } else {
+      // Fallback: decode from URL hash
+      const hash = window.location.hash.slice(1);
+      if (!hash) throw new Error('Link inválido.');
+      const jsonStr = decodeURIComponent(escape(atob(hash)));
+      reportData = JSON.parse(jsonStr);
+    }
+
     verifyAndShow(pass);
   } catch(e) {
     document.getElementById('loading-screen').classList.remove('show');
