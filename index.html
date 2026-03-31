@@ -1273,46 +1273,53 @@ async function publicarInforme() {
   const jsonStr = JSON.stringify(payload, null, 2);
 
   try {
-    // Use JSONBlob — free public JSON hosting, no auth needed for reading
-    showPubStatus('⏳ Publicando informe...', 'load');
+    showPubStatus('⏳ Generando link del informe...', 'load');
 
-    const storedKey = 'blob_' + slug;
-    const existingBlobId = localStorage.getItem(storedKey);
-    let blobId = null;
+    // Encode data directly into URL — no external service needed, no CORS issues
+    const encoded = btoa(unescape(encodeURIComponent(jsonStr)));
 
-    if (existingBlobId) {
-      // Try to update existing blob
-      showPubStatus('⏳ Actualizando informe existente...', 'load');
+    // Also backup to Drive silently (best effort)
+    if (accessToken) {
       try {
-        const ur = await fetch(`https://jsonblob.com/api/jsonBlob/${existingBlobId}`, {
-          method: 'PUT',
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: jsonStr
-        });
-        if (ur.ok) blobId = existingBlobId;
-      } catch(e) { /* will create new */ }
+        const tokenOk = await checkTokenValid();
+        if (tokenOk) {
+          const boundary = 'b' + Date.now();
+          const mp = `--${boundary}
+Content-Type: application/json; charset=UTF-8
+
+` +
+            JSON.stringify({ name: filename, parents: [ROOT_FOLDER_ID] }) +
+            `
+--${boundary}
+Content-Type: application/json
+
+` +
+            jsonStr + `
+--${boundary}--`;
+          const cr = await fetch('https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart&fields=id', {
+            method: 'POST',
+            headers: { 'Authorization': 'Bearer ' + accessToken, 'Content-Type': `multipart/related; boundary=${boundary}` },
+            body: mp
+          });
+          if (cr.ok) {
+            const cd = await cr.json();
+            if (cd.id) {
+              await fetch(`https://www.googleapis.com/drive/v3/files/${cd.id}/permissions`, {
+                method: 'POST',
+                headers: { 'Authorization': 'Bearer ' + accessToken, 'Content-Type': 'application/json' },
+                body: JSON.stringify({ role: 'reader', type: 'anyone' })
+              });
+            }
+          }
+        }
+      } catch(e) { console.log('Drive backup failed silently:', e.message); }
     }
 
-    if (!blobId) {
-      // Create new blob
-      showPubStatus('⏳ Creando informe público...', 'load');
-      const cr = await fetch('https://jsonblob.com/api/jsonBlob', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: jsonStr
-      });
-      if (!cr.ok) throw new Error(`Error publicando (${cr.status})`);
-      const location = cr.headers.get('Location') || '';
-      blobId = location.split('/').pop();
-      if (!blobId) throw new Error('No se pudo obtener el ID del informe');
-      localStorage.setItem(storedKey, blobId);
-    }
-
-    const link = `${NETLIFY_BASE}/informe-cliente.html?blob=${blobId}&slug=${slug}`;
+    const link = `${NETLIFY_BASE}/informe-cliente.html#${encoded}`;
     document.getElementById('pub-link').textContent = link;
     document.getElementById('pub-link-box').style.display = 'block';
     navigator.clipboard.writeText(link).catch(()=>{});
-    showPubStatus(`✅ Informe publicado · ${filtered.length} registros · Link copiado`, 'ok');
+    showPubStatus(`✅ Informe listo · ${filtered.length} registros · Link copiado al portapapeles`, 'ok');
 
   } catch(e) {
     showPubStatus('❌ ' + e.message, 'err');
