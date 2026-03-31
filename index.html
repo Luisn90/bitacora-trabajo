@@ -1315,11 +1315,23 @@ Content-Type: application/json
       } catch(e) { console.log('Drive backup failed silently:', e.message); }
     }
 
-    const link = `${NETLIFY_BASE}/informe-cliente.html#${encoded}`;
-    document.getElementById('pub-link').textContent = link;
+    const longLink = `${NETLIFY_BASE}/informe-cliente.html#${encoded}`;
+
+    // Shorten URL with TinyURL (free, no CORS issues)
+    showPubStatus('⏳ Acortando link...', 'load');
+    let finalLink = longLink;
+    try {
+      const shortResp = await fetch(`https://tinyurl.com/api-create.php?url=${encodeURIComponent(longLink)}`);
+      if (shortResp.ok) {
+        const shortUrl = await shortResp.text();
+        if (shortUrl.startsWith('https://tinyurl.com/')) finalLink = shortUrl;
+      }
+    } catch(e) { /* use long link if shortening fails */ }
+
+    document.getElementById('pub-link').textContent = finalLink;
     document.getElementById('pub-link-box').style.display = 'block';
-    navigator.clipboard.writeText(link).catch(()=>{});
-    showPubStatus(`✅ Informe listo · ${filtered.length} registros · Link copiado al portapapeles`, 'ok');
+    navigator.clipboard.writeText(finalLink).catch(()=>{});
+    showPubStatus(`✅ Informe publicado · ${filtered.length} registros · Link copiado`, 'ok');
 
   } catch(e) {
     showPubStatus('❌ ' + e.message, 'err');
