@@ -3,30 +3,10 @@
     "mes": 2,
     "anio": 2026,
     "mesNombre": "marzo",
-    "generadoEn": "2026-03-31T06:33:07.832Z",
+    "generadoEn": "2026-04-04T16:48:16.660Z",
     "password": "Rocio"
   },
   "registros": [
-    {
-      "id": 1774936474854,
-      "fecha": "2026-03-31",
-      "fechaTrabajo": "2026-03-20",
-      "nombreTrabajo": "Video de Gif Vsl",
-      "cliente": "Marcilla Academy",
-      "tipo": "figma",
-      "descripcion": "Video de Gif Vsl",
-      "horas": 0,
-      "precio": 50,
-      "moneda": "USD",
-      "notas": "",
-      "archivos": [
-        {
-          "name": "Comp 1_3.gif",
-          "driveUrl": "https://drive.google.com/file/d/1mL9MXUrOXvJxfw1nSwOGtU1Oq2TQPifK/view?usp=drivesdk"
-        }
-      ],
-      "resumeNum": 1
-    },
     {
       "id": 1774934074555,
       "fecha": "2026-03-31",
@@ -53,7 +33,8 @@
           "driveUrl": "https://drive.google.com/file/d/1ERbxcUJ00tAlG3ULlzJLjZnQ-Y7wTYBA/view?usp=drivesdk"
         }
       ],
-      "resumeNum": 9
+      "resumeNum": 9,
+      "precioOriginal": 30
     },
     {
       "id": 1774933785252,
@@ -73,7 +54,8 @@
           "driveUrl": "https://drive.google.com/file/d/1xLSEFOHRlsMkGQGA-xxYD4OMFTa59n1w/view?usp=drivesdk"
         }
       ],
-      "resumeNum": 8
+      "resumeNum": 8,
+      "precioOriginal": 5
     },
     {
       "id": 1774933638907,
@@ -101,7 +83,8 @@
           "driveUrl": "https://drive.google.com/file/d/15oBIU6Y_NdfYgFWTLYIy4haBo8nHjFND/view?usp=drivesdk"
         }
       ],
-      "resumeNum": 7
+      "resumeNum": 7,
+      "precioOriginal": 30
     },
     {
       "id": 1774933026949,
@@ -121,7 +104,8 @@
           "driveUrl": "https://drive.google.com/file/d/1hTFLdAeC6Kggx8yIxo_YQMyIdwtaC3_b/view?usp=drivesdk"
         }
       ],
-      "resumeNum": 6
+      "resumeNum": 6,
+      "precioOriginal": 50
     },
     {
       "id": 1774932826714,
@@ -136,7 +120,8 @@
       "moneda": "USD",
       "notas": "",
       "archivos": [],
-      "resumeNum": 5
+      "resumeNum": 5,
+      "precioOriginal": 180
     },
     {
       "id": 1774932584372,
@@ -156,7 +141,8 @@
           "driveUrl": "https://drive.google.com/file/d/1vjRZH-xFDF1XapE6s3_hpS1z1saCOrkU/view?usp=drivesdk"
         }
       ],
-      "resumeNum": 4
+      "resumeNum": 4,
+      "precioOriginal": 170
     },
     {
       "id": 1774931998358,
@@ -176,7 +162,8 @@
           "driveUrl": "https://drive.google.com/file/d/1EIs93VTP6r1XrPMaBlY1OFm5D38bYbCQ/view?usp=drivesdk"
         }
       ],
-      "resumeNum": 3
+      "resumeNum": 3,
+      "precioOriginal": 150
     },
     {
       "id": 1774930871849,
@@ -228,7 +215,65 @@
           "driveUrl": "https://drive.google.com/file/d/1B9kUL-ydWJ-6GmKikxQXKmw6IeujvT6e/view?usp=drivesdk"
         }
       ],
-      "resumeNum": 2
+      "resumeNum": 2,
+      "precioOriginal": 90
+    },
+    {
+      "id": 1774930752889,
+      "fecha": "2026-03-31",
+      "fechaTrabajo": "2026-03-28",
+      "nombreTrabajo": "Carusel de 9 imagenes para instagram",
+      "cliente": "Marcilla Academy",
+      "tipo": "figma",
+      "descripcion": "Carrousel de imagenes para instagram",
+      "horas": 0,
+      "precio": 90,
+      "moneda": "USD",
+      "notas": "",
+      "archivos": [],
+      "resumeNum": 1,
+      "precioOriginal": 90
+    },
+    {
+      "id": 1773990099510,
+      "fecha": "2026-03-20",
+      "cliente": "Tslach",
+      "tipo": "framer",
+      "descripcion": "Cambios de precio en préstamos  y cuotas creando una calculadora en Claude para estimarlos",
+      "horas": 1,
+      "precio": 0,
+      "moneda": "USD",
+      "notas": "Revisar si el calculo es correcto",
+      "archivos": [
+        {
+          "name": "Screenshot_2.png",
+          "driveUrl": "https://drive.google.com/file/d/1GFVOnmMyQMZoX_fcNIP9Khkd_xSJ88lQ/view?usp=drivesdk"
+        },
+        {
+          "name": "Screenshot_3.png",
+          "driveUrl": "https://drive.google.com/file/d/1RSBkbwvmIddFh937OV2xijyXkb-bCZT1/view?usp=drivesdk"
+        }
+      ],
+      "resumeNum": 2,
+      "precioOriginal": 0
+    },
+    {
+      "id": 1773983333442,
+      "fecha": "2026-03-20",
+      "cliente": "Marta Marcilla",
+      "tipo": "figma",
+      "descripcion": "Gif para VSL de Marcilla Academy",
+      "horas": 0,
+      "notas": "$25 costo del gif",
+      "archivos": [
+        {
+          "name": "Comp 1.gif",
+          "driveUrl": "https://drive.google.com/file/d/17sOWmUNt2EOUrJkIZdKlnQ21tk-qev_O/view?usp=drivesdk"
+        }
+      ],
+      "resumeNum": 1,
+      "precioOriginal": 0,
+      "precio": 0
     }
   ]
 }
