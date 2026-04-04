@@ -321,6 +321,33 @@ h1 em { font-style: italic; color: var(--accent); font-family: 'Instrument Serif
 .reg-check-meta { font-family: 'DM Mono', monospace; font-size: .58rem; color: var(--muted); }
 .reg-check-price { font-family: 'DM Mono', monospace; font-size: .65rem; color: #111111; font-weight: 600; white-space: nowrap; margin-top:.1rem; }
 
+/* Price editor in selector */
+.price-editor { display:flex; flex-direction:column; align-items:flex-end; gap:.25rem; flex-shrink:0; }
+.price-original { font-family:'DM Mono',monospace; font-size:.58rem; color:var(--muted); text-decoration:line-through; white-space:nowrap; }
+.price-input-wrap { display:flex; align-items:center; gap:.25rem; }
+.price-input-wrap span { font-family:'DM Mono',monospace; font-size:.68rem; color:var(--muted2); }
+.price-input {
+  width: 80px; background: var(--surface); border: 1px solid var(--border);
+  border-radius: 6px; padding: .25rem .4rem;
+  font-family: 'DM Mono', monospace; font-size: .72rem; font-weight: 600;
+  color: var(--accent); text-align: right; outline: none;
+  transition: border-color .15s;
+}
+.price-input:focus { border-color: var(--accent); }
+.price-diff { font-family:'DM Mono',monospace; font-size:.6rem; font-weight:600; white-space:nowrap; }
+.price-diff.up   { color: #1a5c35; }
+.price-diff.down { color: #c0392b; }
+.price-diff.same { color: var(--muted); }
+.total-preview {
+  background: var(--accent); color: #fff;
+  border-radius: 8px; padding: .5rem 1rem;
+  font-family: 'DM Mono', monospace; font-size: .72rem;
+  display: flex; justify-content: space-between; align-items: center;
+  margin-top: .5rem;
+}
+.total-preview-label { color: rgba(255,255,255,.65); font-size: .6rem; text-transform: uppercase; letter-spacing: .08em; }
+.total-preview-amount { font-size: .9rem; font-weight: 700; }
+
 @media(max-width:600px) {
   .topnav-tabs { display: none; }
   .two-col { grid-template-columns: 1fr; }
@@ -526,6 +553,13 @@ h1 em { font-style: italic; color: var(--accent); font-family: 'Instrument Serif
           </div>
         </div>
         <div id="pub-sel-counter" style="font-family:DM Mono,monospace;font-size:.62rem;color:var(--muted);margin-top:.5rem;text-align:right"></div>
+        <div class="total-preview" id="total-preview" style="display:none">
+          <div>
+            <div class="total-preview-label">Total a publicar</div>
+            <div style="font-size:.6rem;color:rgba(255,255,255,.5);margin-top:.1rem" id="total-diff-label"></div>
+          </div>
+          <div class="total-preview-amount" id="total-preview-amount">—</div>
+        </div>
       </div>
 
       <button class="btn-primary" onclick="publicarInforme()" style="margin-bottom:.75rem">🚀 Publicar en Drive + Copiar link</button>
@@ -1220,24 +1254,47 @@ async function cargarSelectorRegistros() {
     return;
   }
 
+  // Store original regs for price comparison
+  window._selectorRegs = filtered;
+
   list.innerHTML = filtered.map(r => {
     const fecha = new Date((r.fechaTrabajo||r.fecha)+'T12:00:00').toLocaleDateString('es-ES',{day:'numeric',month:'short'});
     const titulo = r.nombreTrabajo || r.descripcion.substring(0,45) + (r.descripcion.length>45?'...':'');
+    const precioOrig = r.precio || 0;
+    const moneda = r.moneda || 'USD';
     return `
-    <div class="reg-check-item selected" id="rci-${r.id}" onclick="toggleReg(${r.id}, this)">
+    <div class="reg-check-item selected" id="rci-${r.id}" onclick="toggleRegClick(event, ${r.id}, this)">
       <div class="reg-checkbox" id="rcb-${r.id}">✓</div>
       <div class="reg-check-info">
         <div class="reg-check-title">${titulo}</div>
         <div class="reg-check-meta">${fecha} · ${r.cliente} · ${TYPE_NAMES[r.tipo]||r.tipo}</div>
       </div>
-      ${r.precio > 0 ? `<div class="reg-check-price">${r.moneda} ${Number(r.precio).toLocaleString('es-ES',{minimumFractionDigits:2})}</div>` : ''}
+      <div class="price-editor">
+        ${precioOrig > 0 ? `<div class="price-original" id="porig-${r.id}">${moneda} ${Number(precioOrig).toLocaleString('es-ES',{minimumFractionDigits:2})}</div>` : '<div class="price-original" id="porig-${r.id}" style="color:var(--muted)">sin precio</div>'}
+        <div class="price-input-wrap">
+          <span>${moneda}</span>
+          <input class="price-input" id="pinp-${r.id}"
+            type="number" min="0" step="0.01"
+            value="${precioOrig > 0 ? precioOrig : ''}"
+            placeholder="0.00"
+            data-original="${precioOrig}"
+            data-moneda="${moneda}"
+            data-regid="${r.id}"
+            onclick="event.stopPropagation()"
+            oninput="onPriceChange(${r.id})">
+        </div>
+        <div class="price-diff same" id="pdiff-${r.id}">—</div>
+      </div>
     </div>`;
   }).join('');
 
   updateCounter();
+  updateTotalPreview();
 }
 
-function toggleReg(id, el) {
+function toggleRegClick(event, id, el) {
+  // Don't toggle if clicking on the input
+  if (event.target.tagName === 'INPUT') return;
   if (selectedRegIds.has(id)) {
     selectedRegIds.delete(id);
     el.classList.remove('selected');
@@ -1248,6 +1305,60 @@ function toggleReg(id, el) {
     document.getElementById('rcb-' + id).textContent = '✓';
   }
   updateCounter();
+  updateTotalPreview();
+}
+
+function onPriceChange(id) {
+  const inp = document.getElementById('pinp-' + id);
+  const diff = document.getElementById('pdiff-' + id);
+  if (!inp || !diff) return;
+  const orig = parseFloat(inp.dataset.original) || 0;
+  const newVal = parseFloat(inp.value) || 0;
+  const delta = newVal - orig;
+  if (Math.abs(delta) < 0.001) {
+    diff.textContent = '—';
+    diff.className = 'price-diff same';
+  } else if (delta > 0) {
+    diff.textContent = '▲ +' + delta.toLocaleString('es-ES',{minimumFractionDigits:2});
+    diff.className = 'price-diff up';
+  } else {
+    diff.textContent = '▼ ' + delta.toLocaleString('es-ES',{minimumFractionDigits:2});
+    diff.className = 'price-diff down';
+  }
+  updateTotalPreview();
+}
+
+function updateTotalPreview() {
+  const regs = window._selectorRegs || [];
+  let totalPub = 0, totalOrig = 0, count = 0;
+  regs.forEach(r => {
+    if (!selectedRegIds.has(r.id)) return;
+    const inp = document.getElementById('pinp-' + r.id);
+    const newVal = inp ? (parseFloat(inp.value) || 0) : (r.precio || 0);
+    const orig   = r.precio || 0;
+    totalPub  += newVal;
+    totalOrig += orig;
+    if (newVal > 0) count++;
+  });
+  const box    = document.getElementById('total-preview');
+  const amount = document.getElementById('total-preview-amount');
+  const dlabel = document.getElementById('total-diff-label');
+  if (!box) return;
+  if (count === 0 && totalPub === 0) { box.style.display='none'; return; }
+  box.style.display = 'flex';
+  const moneda = (window._selectorRegs||[])[0]?.moneda || 'USD';
+  amount.textContent = moneda + ' ' + totalPub.toLocaleString('es-ES',{minimumFractionDigits:2});
+  const diff = totalPub - totalOrig;
+  if (Math.abs(diff) < 0.001) {
+    dlabel.textContent = 'igual al original';
+    dlabel.style.color = 'rgba(255,255,255,.4)';
+  } else if (diff > 0) {
+    dlabel.textContent = '▲ +' + diff.toLocaleString('es-ES',{minimumFractionDigits:2}) + ' vs original';
+    dlabel.style.color = '#86efac';
+  } else {
+    dlabel.textContent = '▼ ' + diff.toLocaleString('es-ES',{minimumFractionDigits:2}) + ' vs original';
+    dlabel.style.color = '#fca5a5';
+  }
 }
 
 function selAllRegs(sel) {
@@ -1293,6 +1404,15 @@ async function publicarInforme() {
   const filtered = regs.filter(r => {
     const d = new Date((r.fechaTrabajo||r.fecha) + 'T12:00:00');
     return d.getMonth() === mes && d.getFullYear() === anio && selectedRegIds.has(r.id);
+  }).map(r => {
+    // Use modified price from input if available
+    const inp = document.getElementById('pinp-' + r.id);
+    const precioPublicar = inp ? (parseFloat(inp.value) || 0) : (r.precio || 0);
+    return {
+      ...r,
+      precioOriginal: r.precio || 0,   // keep original for reference
+      precio: precioPublicar            // use modified price in informe
+    };
   });
 
   if (!filtered.length) { showPubStatus('⚠ No hay registros seleccionados para publicar', 'err'); return; }
