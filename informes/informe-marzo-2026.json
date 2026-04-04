@@ -3,7 +3,7 @@
     "mes": 2,
     "anio": 2026,
     "mesNombre": "marzo",
-    "generadoEn": "2026-04-04T16:48:16.660Z",
+    "generadoEn": "2026-04-04T16:54:40.702Z",
     "password": "Rocio"
   },
   "registros": [
@@ -45,7 +45,7 @@
       "tipo": "figma",
       "descripcion": "Solo lo rehice",
       "horas": 0,
-      "precio": 5,
+      "precio": 0,
       "moneda": "USD",
       "notas": "",
       "archivos": [
@@ -95,7 +95,7 @@
       "tipo": "figma",
       "descripcion": "Video intro logo Marcilla Academy",
       "horas": 0,
-      "precio": 50,
+      "precio": 20,
       "moneda": "USD",
       "notas": "",
       "archivos": [
@@ -116,7 +116,7 @@
       "tipo": "figma",
       "descripcion": "https://docs.google.com/presentation/d/1Il0yN9jdCm-YHXtdQ2x0a61nwUlFEozz/edit?slide=id.p11#slide=id.p11",
       "horas": 0,
-      "precio": 180,
+      "precio": 70,
       "moneda": "USD",
       "notas": "",
       "archivos": [],
@@ -132,7 +132,7 @@
       "tipo": "figma",
       "descripcion": "Manual Web Marcilla Academy",
       "horas": 0,
-      "precio": 170,
+      "precio": 80,
       "moneda": "USD",
       "notas": "",
       "archivos": [
@@ -153,7 +153,7 @@
       "tipo": "figma",
       "descripcion": "Manual de marca Marcilla Academy",
       "horas": 0,
-      "precio": 150,
+      "precio": 80,
       "moneda": "USD",
       "notas": "",
       "archivos": [
@@ -217,45 +217,6 @@
       ],
       "resumeNum": 2,
       "precioOriginal": 90
-    },
-    {
-      "id": 1774930752889,
-      "fecha": "2026-03-31",
-      "fechaTrabajo": "2026-03-28",
-      "nombreTrabajo": "Carusel de 9 imagenes para instagram",
-      "cliente": "Marcilla Academy",
-      "tipo": "figma",
-      "descripcion": "Carrousel de imagenes para instagram",
-      "horas": 0,
-      "precio": 90,
-      "moneda": "USD",
-      "notas": "",
-      "archivos": [],
-      "resumeNum": 1,
-      "precioOriginal": 90
-    },
-    {
-      "id": 1773990099510,
-      "fecha": "2026-03-20",
-      "cliente": "Tslach",
-      "tipo": "framer",
-      "descripcion": "Cambios de precio en préstamos  y cuotas creando una calculadora en Claude para estimarlos",
-      "horas": 1,
-      "precio": 0,
-      "moneda": "USD",
-      "notas": "Revisar si el calculo es correcto",
-      "archivos": [
-        {
-          "name": "Screenshot_2.png",
-          "driveUrl": "https://drive.google.com/file/d/1GFVOnmMyQMZoX_fcNIP9Khkd_xSJ88lQ/view?usp=drivesdk"
-        },
-        {
-          "name": "Screenshot_3.png",
-          "driveUrl": "https://drive.google.com/file/d/1RSBkbwvmIddFh937OV2xijyXkb-bCZT1/view?usp=drivesdk"
-        }
-      ],
-      "resumeNum": 2,
-      "precioOriginal": 0
     },
     {
       "id": 1773983333442,
