@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "mes": 3,
+    "anio": 2026,
+    "mesNombre": "abril",
+    "generadoEn": "2026-05-01T20:14:40.931Z",
+    "password": "Abril"
+  },
+  "registros": [
+    {
+      "id": 1777666454557,
+      "fecha": "2026-05-01",
+      "fechaTrabajo": "2026-04-15",
+      "nombreTrabajo": "Diapositivas para los videos",
+      "cliente": "marcilla Academy",
+      "tipo": "figma",
+      "descripcion": "https://drive.google.com/drive/folders/1LcuCVulOUXEvaxhAB4jNahtHCJlausTa",
+      "horas": 0,
+      "precio": 220,
+      "moneda": "USD",
+      "notas": "",
+      "archivos": [
+        {
+          "name": "Screenshot_13.png",
+          "driveUrl": "https://drive.google.com/file/d/1I8Rp5GNJsBy3u8VULuu8BzIVaTa3_IyY/view?usp=drivesdk"
+        }
+      ],
+      "resumeNum": 5,
+      "precioOriginal": 220
+    },
+    {
+      "id": 1777666107796,
+      "fecha": "2026-05-01",
+      "fechaTrabajo": "2026-04-25",
+      "nombreTrabajo": "Cambios varios en la pagina",
+      "cliente": "Tslach",
+      "tipo": "figma",
+      "descripcion": "1-Crear formularios nuevos ya que lo s de typeform no se podian medir.\n2-Agregar una lista de numeros mas grande  a esos formularios\n3-Creacion de pagina de gracias para los 3 formularios(venta, compra e inversores) enlazado al crm\n4-Creación de Formato a y b  con formulario enlazado al crm\nAgregar Pixel a la pagina",
+      "horas": 0,
+      "precio": 150,
+      "moneda": "USD",
+      "notas": "Estos cambios se realizaron en el mes en conjunto con el equipo",
+      "archivos": [],
+      "resumeNum": 4,
+      "precioOriginal": 150
+    },
+    {
+      "id": 1777665648022,
+      "fecha": "2026-05-01",
+      "fechaTrabajo": "2026-04-29",
+      "nombreTrabajo": "Diseño de plantillas para redes",
+      "cliente": "Marcilla Academy",
+      "tipo": "figma",
+      "descripcion": "Diseño de plantillas base y de linea para redes de Marcilla Academy https://www.figma.com/design/9eYMeujvZI90ZQw0SOd5VB/Marta-Marcilla?node-id=4200-302&t=2ZgrYMHZxPOLfzWR-1",
+      "horas": 0,
+      "precio": 150,
+      "moneda": "USD",
+      "notas": "",
+      "archivos": [
+        {
+          "name": "Screenshot_14.png",
+          "driveUrl": "https://drive.google.com/file/d/1i-VAcc4RoMtOymaNBtH6oT6JR8TNAjDy/view?usp=drivesdk"
+        }
+      ],
+      "resumeNum": 3,
+      "precioOriginal": 150
+    },
+    {
+      "id": 1777665329428,
+      "fecha": "2026-05-01",
+      "fechaTrabajo": "2026-04-21",
+      "nombreTrabajo": "Ejercicios",
+      "cliente": "Marcilla Academy",
+      "tipo": "figma",
+      "descripcion": "Ejercicios",
+      "horas": 0,
+      "precio": 100,
+      "moneda": "USD",
+      "notas": "",
+      "archivos": [
+        {
+          "name": "ej2.pdf",
+          "driveUrl": "https://drive.google.com/file/d/1WdGSdHiPTuSClF4EC_fYoIp7DRaCigCm/view?usp=drivesdk"
+        },
+        {
+          "name": "ej3.pdf",
+          "driveUrl": "https://drive.google.com/file/d/1FJt6NlJ_4jg34LguxTZ10ER4NTvXPSsi/view?usp=drivesdk"
+        },
+        {
+          "name": "ej4.pdf",
+          "driveUrl": "https://drive.google.com/file/d/1lsYatarZiO8UrVIN_No0t_fA-vUcIk5W/view?usp=drivesdk"
+        },
+        {
+          "name": "ej5.pdf",
+          "driveUrl": "https://drive.google.com/file/d/1e4uQ0_DxWBpCf0ZIZ3bM-DEAqJJhT6Vz/view?usp=drivesdk"
+        },
+        {
+          "name": "ej1.pdf",
+          "driveUrl": "https://drive.google.com/file/d/1q9dKcy5BZlS0zx25UEd3CXtZYtT0V3H9/view?usp=drivesdk"
+        }
+      ],
+      "resumeNum": 2,
+      "precioOriginal": 100
+    }
+  ]
+}
