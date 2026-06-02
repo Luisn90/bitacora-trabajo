@@ -1,0 +1,241 @@
+{
+  "meta": {
+    "mes": 4,
+    "anio": 2026,
+    "mesNombre": "mayo",
+    "generadoEn": "2026-06-02T16:36:05.761Z",
+    "password": "Mayo"
+  },
+  "registros": [
+    {
+      "id": 1780417992197,
+      "fecha": "2026-06-02",
+      "fechaTrabajo": "2026-05-31",
+      "nombreTrabajo": "Pagina comunidad 1 ra Version",
+      "cliente": "Marcilla Academy",
+      "tipo": "framer",
+      "descripcion": "Pagina comunidad 1 ra Version",
+      "horas": 0,
+      "precio": 49.97,
+      "moneda": "USD",
+      "notas": "",
+      "archivos": [
+        {
+          "name": "pagina comunidad 1e era version.png",
+          "driveUrl": "https://drive.google.com/file/d/1o5ol367emqxHibq1dfsCPVPSstmRcFH7/view?usp=drivesdk"
+        }
+      ],
+      "resumeNum": 10,
+      "precioOriginal": 49.97
+    },
+    {
+      "id": 1780417930475,
+      "fecha": "2026-06-02",
+      "fechaTrabajo": "2026-05-31",
+      "nombreTrabajo": "Pagina club 1era version",
+      "cliente": "Marcilla Academy",
+      "tipo": "framer",
+      "descripcion": "Pagina club 1era version",
+      "horas": 0,
+      "precio": 50,
+      "moneda": "USD",
+      "notas": "",
+      "archivos": [
+        {
+          "name": "Screenshot_25.png",
+          "driveUrl": "https://drive.google.com/file/d/1emfPwCg1VL0Ek1ipARlXKYi5htuewB_q/view?usp=drivesdk"
+        }
+      ],
+      "resumeNum": 9,
+      "precioOriginal": 50
+    },
+    {
+      "id": 1780417825136,
+      "fecha": "2026-06-02",
+      "fechaTrabajo": "2026-05-31",
+      "nombreTrabajo": "Presentacion",
+      "cliente": "Marcilla Academy",
+      "tipo": "framer",
+      "descripcion": "Presentacion https://docs.google.com/presentation/d/12pwzti4Mc7TmkuMaf0mkuoQNE7N9IMOneRpcQIKcskk/edit?slide=id.p4#slide=id.p4",
+      "horas": 0,
+      "precio": 79.99,
+      "moneda": "USD",
+      "notas": "https://docs.google.com/presentation/d/12pwzti4Mc7TmkuMaf0mkuoQNE7N9IMOneRpcQIKcskk/edit?slide=id.p4#slide=id.p4",
+      "archivos": [
+        {
+          "name": "Screenshot_23.png",
+          "driveUrl": "https://drive.google.com/file/d/1HRmogXjphtqzXj2PyRkrD-vFiADEh2gB/view?usp=drivesdk"
+        }
+      ],
+      "resumeNum": 8,
+      "precioOriginal": 79.99
+    },
+    {
+      "id": 1780417675747,
+      "fecha": "2026-06-02",
+      "fechaTrabajo": "2026-05-31",
+      "nombreTrabajo": "Pagina Club 1era version",
+      "cliente": "Marcilla Academy",
+      "tipo": "framer",
+      "descripcion": "Pagina Club 1era version",
+      "horas": 0,
+      "precio": 50,
+      "moneda": "USD",
+      "notas": "",
+      "archivos": [
+        {
+          "name": "Screenshot_22.png",
+          "driveUrl": "https://drive.google.com/file/d/1iMslWZy7Q-jIiLMv4VcuySPmS6HzbJD3/view?usp=drivesdk"
+        }
+      ],
+      "resumeNum": 7,
+      "precioOriginal": 50
+    },
+    {
+      "id": 1780417610108,
+      "fecha": "2026-06-02",
+      "fechaTrabajo": "2026-05-31",
+      "nombreTrabajo": "Pagina Club",
+      "cliente": "Marcilla Academy",
+      "tipo": "framer",
+      "descripcion": "Pagina Club",
+      "horas": 0,
+      "precio": 150,
+      "moneda": "USD",
+      "notas": "",
+      "archivos": [
+        {
+          "name": "Screenshot_21.png",
+          "driveUrl": "https://drive.google.com/file/d/1_9NVHWv-EhpC7xHa0VGhtSi4LPhxRKHl/view?usp=drivesdk"
+        }
+      ],
+      "resumeNum": 6,
+      "precioOriginal": 150
+    },
+    {
+      "id": 1780417534444,
+      "fecha": "2026-06-02",
+      "fechaTrabajo": "2026-05-31",
+      "nombreTrabajo": "Pagina comunidad",
+      "cliente": "Marcilla Academy",
+      "tipo": "framer",
+      "descripcion": "Pagina comunidad",
+      "horas": 0,
+      "precio": 150,
+      "moneda": "USD",
+      "notas": "",
+      "archivos": [
+        {
+          "name": "Screenshot_20.png",
+          "driveUrl": "https://drive.google.com/file/d/1wcINXhsJFalNpabGTd4-iDJXWcBbuh8w/view?usp=drivesdk"
+        }
+      ],
+      "resumeNum": 5,
+      "precioOriginal": 150
+    },
+    {
+      "id": 1780417404623,
+      "fecha": "2026-06-02",
+      "fechaTrabajo": "2026-05-31",
+      "nombreTrabajo": "Pagina Plazas cerradas",
+      "cliente": "Marcilla Academy",
+      "tipo": "framer",
+      "descripcion": "Pagina Plazas cerradas https://marcillauniversity.com/plazas-cerradas",
+      "horas": 0,
+      "precio": 150,
+      "moneda": "USD",
+      "notas": "",
+      "archivos": [
+        {
+          "name": "Screenshot_19.png",
+          "driveUrl": "https://drive.google.com/file/d/19-HSRviOS6XgbB61B4bOA4xMu0i26DS0/view?usp=drivesdk"
+        }
+      ],
+      "resumeNum": 4,
+      "precioOriginal": 150
+    },
+    {
+      "id": 1780417190277,
+      "fecha": "2026-06-02",
+      "fechaTrabajo": "2026-05-31",
+      "nombreTrabajo": "Pagina de Marta Marcilla en frammer",
+      "cliente": "Marta Marcilla",
+      "tipo": "figma",
+      "descripcion": "Pagina de Marta Marcilla en frammer https://alert-knowledge-869155.framer.app/",
+      "horas": 0,
+      "precio": 150,
+      "moneda": "USD",
+      "notas": "",
+      "archivos": [
+        {
+          "name": "Screenshot_18.png",
+          "driveUrl": "https://drive.google.com/file/d/1euEvwcf6mcmMVLjH0HLUEc7DcbTbOg3m/view?usp=drivesdk"
+        }
+      ],
+      "resumeNum": 3,
+      "precioOriginal": 150
+    },
+    {
+      "id": 1780416993386,
+      "fecha": "2026-06-02",
+      "fechaTrabajo": "2026-05-09",
+      "nombreTrabajo": "Ejercicios del 6 al 9",
+      "cliente": "Marcilla Academy",
+      "tipo": "figma",
+      "descripcion": "Ejercicios del 6 al 9",
+      "horas": 0,
+      "precio": 80,
+      "moneda": "USD",
+      "notas": "",
+      "archivos": [
+        {
+          "name": "ej8.pdf",
+          "driveUrl": "https://drive.google.com/file/d/1t3P84bV9_2uzJTB1-Lb-e8LALNYqQItA/view?usp=drivesdk"
+        },
+        {
+          "name": "ej9.pdf",
+          "driveUrl": "https://drive.google.com/file/d/1cxOc4JlrLYa6XSB5uTecPRDH6DKVizi6/view?usp=drivesdk"
+        },
+        {
+          "name": "ej6.pdf",
+          "driveUrl": "https://drive.google.com/file/d/1yoZLi5ivAjKuVbET6tujZwXslX_BPg4A/view?usp=drivesdk"
+        },
+        {
+          "name": "ej7.pdf",
+          "driveUrl": "https://drive.google.com/file/d/1TwhgGw0lESyg3pVacOueas1_ZKMlE9Oj/view?usp=drivesdk"
+        }
+      ],
+      "resumeNum": 2,
+      "precioOriginal": 80
+    },
+    {
+      "id": 1780416595645,
+      "fecha": "2026-06-02",
+      "fechaTrabajo": "2026-05-03",
+      "nombreTrabajo": "Banner modulo de negocios",
+      "cliente": "Marcilla Academy",
+      "tipo": "figma",
+      "descripcion": "Arte para modulo de negocios",
+      "horas": 0,
+      "precio": 5,
+      "moneda": "USD",
+      "notas": "",
+      "archivos": [
+        {
+          "name": "capitulo 5- 1.jpg",
+          "driveUrl": "https://drive.google.com/file/d/14-GbdzjoOMtYbzvGTAPegzdWNy4_19bY/view?usp=drivesdk"
+        },
+        {
+          "name": "capitulo 5- 2.jpg",
+          "driveUrl": "https://drive.google.com/file/d/1ukRelfL_Ebg0eN1JCH6Qfk1Wiwm51Nlz/view?usp=drivesdk"
+        },
+        {
+          "name": "capitulo 5- 3.jpg",
+          "driveUrl": "https://drive.google.com/file/d/1DSTLgOL9vUA2bEjmdbQQoqpODNEZynno/view?usp=drivesdk"
+        }
+      ],
+      "resumeNum": 1,
+      "precioOriginal": 5
+    }
+  ]
+}
