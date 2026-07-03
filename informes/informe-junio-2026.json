@@ -1,0 +1,292 @@
+{
+  "meta": {
+    "mes": 5,
+    "anio": 2026,
+    "mesNombre": "junio",
+    "generadoEn": "2026-07-03T07:09:46.408Z",
+    "password": "junio"
+  },
+  "registros": [
+    {
+      "id": 1783062293837,
+      "fecha": "2026-07-03",
+      "fechaTrabajo": "2026-06-01",
+      "nombreTrabajo": "Maika lopez imagenes",
+      "cliente": "Marta Marcilla",
+      "tipo": "otro",
+      "descripcion": "Maika lopez imagenes",
+      "horas": 0,
+      "precio": 10,
+      "moneda": "USD",
+      "notas": "",
+      "archivos": [
+        {
+          "name": "Screenshot_28.png",
+          "driveUrl": "https://drive.google.com/file/d/1OSNEmGvMX35cB-gudfPnRJE-V2YV9EUD/view?usp=drivesdk"
+        }
+      ],
+      "resumeNum": 13,
+      "precioOriginal": 10
+    },
+    {
+      "id": 1783062196538,
+      "fecha": "2026-07-03",
+      "fechaTrabajo": "2026-06-01",
+      "nombreTrabajo": "Carta La partida",
+      "cliente": "Marta Marcilla",
+      "tipo": "otro",
+      "descripcion": "Carta La partida",
+      "horas": 0,
+      "precio": 30,
+      "moneda": "USD",
+      "notas": "",
+      "archivos": [
+        {
+          "name": "Screenshot_27.png",
+          "driveUrl": "https://drive.google.com/file/d/1Jp9gkHmZn3aamU6sqnNXGw0xoCmOKbRk/view?usp=drivesdk"
+        }
+      ],
+      "resumeNum": 12,
+      "precioOriginal": 30
+    },
+    {
+      "id": 1783062114752,
+      "fecha": "2026-07-03",
+      "fechaTrabajo": "2026-06-01",
+      "nombreTrabajo": "Variables para imagenes de  avatar instagram",
+      "cliente": "Marta Marcilla",
+      "tipo": "otro",
+      "descripcion": "Variables para imagenes de  avatar instagram",
+      "horas": 0,
+      "precio": 60,
+      "moneda": "USD",
+      "notas": "",
+      "archivos": [
+        {
+          "name": "Screenshot_26.png",
+          "driveUrl": "https://drive.google.com/file/d/1G0Y0SfQmKNiDuz7CltMGajwKcdS5PJDR/view?usp=drivesdk"
+        }
+      ],
+      "resumeNum": 11,
+      "precioOriginal": 60
+    },
+    {
+      "id": 1783062019678,
+      "fecha": "2026-07-03",
+      "fechaTrabajo": "2026-06-01",
+      "nombreTrabajo": "Documento Elite",
+      "cliente": "Marta Marcilla",
+      "tipo": "otro",
+      "descripcion": "programa premium y consultoría empresarial",
+      "horas": 0,
+      "precio": 30,
+      "moneda": "USD",
+      "notas": "",
+      "archivos": [
+        {
+          "name": "Screenshot_25.png",
+          "driveUrl": "https://drive.google.com/file/d/1IFykXAhF9Hi-KJ9aRBoVjzMXLNm4hFQI/view?usp=drivesdk"
+        }
+      ],
+      "resumeNum": 10,
+      "precioOriginal": 30
+    },
+    {
+      "id": 1783061874484,
+      "fecha": "2026-07-03",
+      "fechaTrabajo": "2026-06-01",
+      "nombreTrabajo": "Documentos de planes",
+      "cliente": "Marta Marcilla",
+      "tipo": "otro",
+      "descripcion": "Documentos de planes",
+      "horas": 0,
+      "precio": 45,
+      "moneda": "USD",
+      "notas": "",
+      "archivos": [
+        {
+          "name": "Screenshot_24.png",
+          "driveUrl": "https://drive.google.com/file/d/1IOURTuZhcEPjPy3qNY8vg5q4fLAvPyy1/view?usp=drivesdk"
+        }
+      ],
+      "resumeNum": 9,
+      "precioOriginal": 45
+    },
+    {
+      "id": 1783061748194,
+      "fecha": "2026-07-03",
+      "fechaTrabajo": "2026-06-01",
+      "nombreTrabajo": "Pagina dela partida",
+      "cliente": "Marta Marcilla",
+      "tipo": "framer",
+      "descripcion": "Pagina principal de la partida con sus variantes",
+      "horas": 0,
+      "precio": 200,
+      "moneda": "USD",
+      "notas": "",
+      "archivos": [
+        {
+          "name": "Screenshot_23.png",
+          "driveUrl": "https://drive.google.com/file/d/1OC5MKrcG_TrGRx5OO46mJJJQciTgk2R7/view?usp=drivesdk"
+        }
+      ],
+      "resumeNum": 8,
+      "precioOriginal": 200
+    },
+    {
+      "id": 1783061556799,
+      "fecha": "2026-07-03",
+      "fechaTrabajo": "2026-06-01",
+      "nombreTrabajo": "Pagina de estas a un solo paso",
+      "cliente": "Marta Marcilla",
+      "tipo": "framer",
+      "descripcion": "https://martamarcilla.com/ga\nhttps://martamarcilla.com/gb\nhttps://martamarcilla.com/gc\nhttps://martamarcilla.com/gd",
+      "horas": 0,
+      "precio": 80,
+      "moneda": "USD",
+      "notas": "Pgina de estas a un solo paso con sus variantes , al seguir el link en la pagina se desbloquean  otras secciones con autoridad etc",
+      "archivos": [
+        {
+          "name": "Screenshot_22.png",
+          "driveUrl": "https://drive.google.com/file/d/1mgibyRm9a4WjlXO-vgVKX5wHveL6XR4B/view?usp=drivesdk"
+        }
+      ],
+      "resumeNum": 7,
+      "precioOriginal": 80
+    },
+    {
+      "id": 1783061373877,
+      "fecha": "2026-07-03",
+      "fechaTrabajo": "2026-06-01",
+      "nombreTrabajo": "Paginas de Términos",
+      "cliente": "Marta Marcilla",
+      "tipo": "framer",
+      "descripcion": "https://martamarcilla.com/politica-de-privacidad\nhttps://martamarcilla.com/pol%C3%ADtica-de-cookies\nhttps://martamarcilla.com/aviso-legal",
+      "horas": 0,
+      "precio": 80,
+      "moneda": "USD",
+      "notas": "",
+      "archivos": [
+        {
+          "name": "Screenshot_21.png",
+          "driveUrl": "https://drive.google.com/file/d/11oG4azrgXC6G63sZfu2Q63ex-h16pnzA/view?usp=drivesdk"
+        }
+      ],
+      "resumeNum": 6,
+      "precioOriginal": 80
+    },
+    {
+      "id": 1783061189766,
+      "fecha": "2026-07-03",
+      "fechaTrabajo": "2026-06-01",
+      "nombreTrabajo": "Pagina de gracias",
+      "cliente": "Marta Marcilla",
+      "tipo": "framer",
+      "descripcion": "Pagina de gracias https://martamarcilla.com/gracias",
+      "horas": 0,
+      "precio": 80,
+      "moneda": "USD",
+      "notas": "",
+      "archivos": [
+        {
+          "name": "Screenshot_20.png",
+          "driveUrl": "https://drive.google.com/file/d/10pdC7gOtDP3Y4SsOmlRB3RM4n5CVENt5/view?usp=drivesdk"
+        }
+      ],
+      "resumeNum": 5,
+      "precioOriginal": 80
+    },
+    {
+      "id": 1783061007582,
+      "fecha": "2026-07-03",
+      "fechaTrabajo": "2026-06-01",
+      "nombreTrabajo": "Pagina de comunidad secreta",
+      "cliente": "Marta Marcilla",
+      "tipo": "framer",
+      "descripcion": "Pagina de comunidad secreta  en donde se desbloqueaban los los videos a medida pasaban los días y se posicionaban en la vista principal con sus variantes https://martamarcilla.com/comunidadsecretac",
+      "horas": 0,
+      "precio": 150,
+      "moneda": "USD",
+      "notas": "",
+      "archivos": [
+        {
+          "name": "Screenshot_19.png",
+          "driveUrl": "https://drive.google.com/file/d/1OTMMO1QzTHs4ypty8KsAu6lXiRzuX0vO/view?usp=drivesdk"
+        }
+      ],
+      "resumeNum": 4,
+      "precioOriginal": 150
+    },
+    {
+      "id": 1783060707447,
+      "fecha": "2026-07-03",
+      "fechaTrabajo": "2026-06-01",
+      "nombreTrabajo": "Pagina de términos reserva de plazas",
+      "cliente": "Marta Marcilla",
+      "tipo": "framer",
+      "descripcion": "https://martamarcilla.com/terms-reserva-de-plaza\nhttps://martamarcilla.com/terms-cria-de-leonas\nhttps://martamarcilla.com/terms-aspirantes-a-leonas\nhttps://martamarcilla.com/terms-lideres-de-leonas\nhttps://martamarcilla.com/consultoria\nhttps://martamarcilla.com/mm-elite",
+      "horas": 0,
+      "precio": 150,
+      "moneda": "USD",
+      "notas": "Realizacion de paginas con documentos legales  individuales y en conjunto todas en una",
+      "archivos": [
+        {
+          "name": "Screenshot_18.png",
+          "driveUrl": "https://drive.google.com/file/d/1kDSRFvHkFFmXTna4LmB9rzGLjJnqk0dy/view?usp=drivesdk"
+        }
+      ],
+      "resumeNum": 3,
+      "precioOriginal": 150
+    },
+    {
+      "id": 1783060502968,
+      "fecha": "2026-07-03",
+      "fechaTrabajo": "2026-06-01",
+      "nombreTrabajo": "Imágenes varias  redes",
+      "cliente": "Marta Marcilla",
+      "tipo": "figma",
+      "descripcion": "Imagenes varias realizadas en el mes para redes etc fueron 25 aproximadamente",
+      "horas": 0,
+      "precio": 125,
+      "moneda": "USD",
+      "notas": "",
+      "archivos": [
+        {
+          "name": "Screenshot_16.png",
+          "driveUrl": "https://drive.google.com/file/d/12frq-7Cj4YyuAYYVE32uke2rZub6AssP/view?usp=drivesdk"
+        }
+      ],
+      "resumeNum": 2,
+      "precioOriginal": 125
+    },
+    {
+      "id": 1783060330511,
+      "fecha": "2026-07-03",
+      "fechaTrabajo": "2026-06-01",
+      "nombreTrabajo": "Presentación Evento 29 junio",
+      "cliente": "Marta Marcilla",
+      "tipo": "figma",
+      "descripcion": "Documento de unas 120 paginas al principio , luego se modificó y varias diapositivas no se usaron sin embargo se hicieron , luego se refinaron las paginas finales",
+      "horas": 0,
+      "precio": 200,
+      "moneda": "USD",
+      "notas": "",
+      "archivos": [
+        {
+          "name": "Clase JAQUE - diapositivas.pptx",
+          "driveUrl": "https://docs.google.com/presentation/d/1fFLOz7R3Sexu4IZp3Tc8wYEmtUu0OY3a/edit?usp=drivesdk&ouid=100131104923007670676&rtpof=true&sd=true"
+        },
+        {
+          "name": "Screenshot_14.png",
+          "driveUrl": "https://drive.google.com/file/d/1WuW0l-QdCjb-krcWl2Yugb1TSFqyDCsR/view?usp=drivesdk"
+        },
+        {
+          "name": "Screenshot_15.png",
+          "driveUrl": "https://drive.google.com/file/d/1pvbVf9Ex9bjTb1fRZjQSQDvtt4zU-4FA/view?usp=drivesdk"
+        }
+      ],
+      "resumeNum": 1,
+      "precioOriginal": 200
+    }
+  ]
+}
