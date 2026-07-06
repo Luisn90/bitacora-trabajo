@@ -3,7 +3,7 @@
     "mes": 5,
     "anio": 2026,
     "mesNombre": "junio",
-    "generadoEn": "2026-07-03T07:09:46.408Z",
+    "generadoEn": "2026-07-06T16:51:23.808Z",
     "password": "junio"
   },
   "registros": [
@@ -100,7 +100,7 @@
       "tipo": "otro",
       "descripcion": "Documentos de planes",
       "horas": 0,
-      "precio": 45,
+      "precio": 30,
       "moneda": "USD",
       "notas": "",
       "archivos": [
@@ -121,7 +121,7 @@
       "tipo": "framer",
       "descripcion": "Pagina principal de la partida con sus variantes",
       "horas": 0,
-      "precio": 200,
+      "precio": 150,
       "moneda": "USD",
       "notas": "",
       "archivos": [
@@ -205,7 +205,7 @@
       "tipo": "framer",
       "descripcion": "Pagina de comunidad secreta  en donde se desbloqueaban los los videos a medida pasaban los días y se posicionaban en la vista principal con sus variantes https://martamarcilla.com/comunidadsecretac",
       "horas": 0,
-      "precio": 150,
+      "precio": 110,
       "moneda": "USD",
       "notas": "",
       "archivos": [
@@ -226,7 +226,7 @@
       "tipo": "framer",
       "descripcion": "https://martamarcilla.com/terms-reserva-de-plaza\nhttps://martamarcilla.com/terms-cria-de-leonas\nhttps://martamarcilla.com/terms-aspirantes-a-leonas\nhttps://martamarcilla.com/terms-lideres-de-leonas\nhttps://martamarcilla.com/consultoria\nhttps://martamarcilla.com/mm-elite",
       "horas": 0,
-      "precio": 150,
+      "precio": 100,
       "moneda": "USD",
       "notas": "Realizacion de paginas con documentos legales  individuales y en conjunto todas en una",
       "archivos": [
@@ -247,7 +247,7 @@
       "tipo": "figma",
       "descripcion": "Imagenes varias realizadas en el mes para redes etc fueron 25 aproximadamente",
       "horas": 0,
-      "precio": 125,
+      "precio": 90,
       "moneda": "USD",
       "notas": "",
       "archivos": [
@@ -268,7 +268,7 @@
       "tipo": "figma",
       "descripcion": "Documento de unas 120 paginas al principio , luego se modificó y varias diapositivas no se usaron sin embargo se hicieron , luego se refinaron las paginas finales",
       "horas": 0,
-      "precio": 200,
+      "precio": 150,
       "moneda": "USD",
       "notas": "",
       "archivos": [
